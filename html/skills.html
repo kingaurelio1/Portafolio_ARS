@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skills - Professional Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "inverse-surface": "#e3e1e9",
+                "surface": "#121318",
+                "on-surface": "#e3e1e9",
+                "surface-container-high": "#292a2f",
+                "primary": "#dbfcff",
+                "surface-tint": "#00dbe9",
+                "error-container": "#93000a",
+                "on-tertiary-container": "#7213ff",
+                "on-tertiary-fixed-variant": "#5700c9",
+                "primary-container": "#00f0ff",
+                "secondary": "#aec6ff",
+                "surface-dim": "#121318",
+                "on-error-container": "#ffdad6",
+                "surface-container-lowest": "#0d0e13",
+                "outline": "#849495",
+                "on-secondary-container": "#00275e",
+                "on-secondary": "#002e6a",
+                "on-surface-variant": "#b9cacb",
+                "on-tertiary": "#3c0090",
+                "on-secondary-fixed-variant": "#004396",
+                "tertiary-fixed-dim": "#d1bcff",
+                "tertiary-fixed": "#e9ddff",
+                "on-secondary-fixed": "#001a42",
+                "outline-variant": "#3b494b",
+                "inverse-primary": "#006970",
+                "surface-variant": "#34343a",
+                "on-primary-fixed": "#002022",
+                "surface-bright": "#38393f",
+                "error": "#ffb4ab",
+                "background": "#0a0a0c",
+                "on-error": "#690005",
+                "surface-container-highest": "#34343a",
+                "secondary-container": "#4f8eff",
+                "primary-fixed": "#7df4ff",
+                "primary-fixed-dim": "#00dbe9",
+                "on-background": "#e3e1e9",
+                "inverse-on-surface": "#2f3036",
+                "on-primary-fixed-variant": "#004f54",
+                "secondary-fixed-dim": "#aec6ff",
+                "on-primary-container": "#006970",
+                "on-tertiary-fixed": "#23005b",
+                "tertiary": "#faf3ff",
+                "secondary-fixed": "#d8e2ff",
+                "on-primary": "#00363a",
+                "tertiary-container": "#e1d2ff",
+                "surface-container-low": "#121318",
+                "surface-container": "#16171d"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "max-width": "1280px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "unit": "4px"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "Sora"
+                ],
+                "body-md": [
+                        "Geist"
+                ],
+                "display-lg-mobile": [
+                        "Sora"
+                ],
+                "code-sm": [
+                        "JetBrains Mono"
+                ],
+                "body-lg": [
+                        "Geist"
+                ],
+                "headline-md": [
+                        "Sora"
+                ],
+                "label-mono": [
+                        "JetBrains Mono"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "code-sm": [
+                        "13px",
+                        {
+                                "lineHeight": "18px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-mono": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .glass-panel {
+            background: rgba(18, 19, 24, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        .skill-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 240, 255, 0.05);
+        }
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px -10px rgba(0, 240, 255, 0.2), inset 0 0 30px rgba(0, 240, 255, 0.1);
+            border-color: rgba(0, 240, 255, 0.6);
+        }
+        .progress-bar-fill {
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.8);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+        .bg-cyber-gradient {
+            background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container relative">
+<div class="fixed inset-0 pointer-events-none bg-cyber-gradient z-0"></div>
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-primary-container/20">
+<div class="flex justify-between items-center h-20 px-8 max-w-max-width mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary-container active:scale-95 transition-transform duration-200 text-glow" href="#">
+                Portfolio
+            </a>
+<div class="hidden md:flex space-x-8">
+<a class="text-on-surface-variant hover:text-primary-container transition-colors hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 rounded-DEFAULT" href="#">
+                    About Me
+                </a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 rounded-DEFAULT" href="#">
+                    Projects
+                </a>
+<a class="text-primary-container font-bold border-b-2 border-primary-container pb-1 hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 text-glow" href="#">
+                    Skills
+                </a><a class="text-on-surface-variant hover:text-primary-container transition-colors hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 rounded-DEFAULT" href="#">Photography</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 rounded-DEFAULT" href="#">
+                    Contact
+                </a>
+</div>
+<button class="hidden md:block bg-primary-container text-on-primary-container font-body-md text-body-md font-bold py-2 px-6 rounded-DEFAULT hover:opacity-90 transition-opacity active:scale-95 transition-transform duration-200 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)]">
+                Download CV
+            </button>
+<button class="md:hidden text-primary-container p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-32 px-4 md:px-8 max-w-max-width mx-auto relative z-10">
+<header class="mb-16 md:mb-24 text-center md:text-left max-w-3xl">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-6 text-glow">
+                Technical Arsenal
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                A comprehensive approach to development, combining solid foundations in software engineering with modern tools to build scalable, high-performance digital experiences.
+            </p>
+</header>
+<section class="mb-24">
+<h2 class="font-display-lg text-display-lg text-primary mb-10 flex items-center gap-3 border-b border-primary-container/30 pb-4 text-glow">
+<span class="material-symbols-outlined text-primary-container drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]" style="font-variation-settings: 'FILL' 1;">terminal</span>
+                Main Stack
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"><div class="bg-surface-container rounded-xl p-8 skill-shadow hover-lift border border-primary-container/20 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-20 transition-opacity text-primary-container">
+<span class="material-symbols-outlined text-6xl drop-shadow-[0_0_15px_rgba(0,240,255,0.5)]">code</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6 relative z-10 text-glow">Programming</h3>
+<div class="flex flex-wrap gap-2 relative z-10">
+<span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/40 shadow-[0_0_10px_rgba(0,240,255,0.1)]">Python (Advanced)</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">C++</span>
+<span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/40 shadow-[0_0_10px_rgba(0,240,255,0.1)]">Java (Advanced)</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">JavaScript</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-8 skill-shadow hover-lift border border-primary-container/20 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-20 transition-opacity text-primary-container">
+<span class="material-symbols-outlined text-6xl drop-shadow-[0_0_15px_rgba(0,240,255,0.5)]">web</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6 relative z-10 text-glow">Web</h3>
+<div class="flex flex-wrap gap-2 relative z-10">
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">HTML5</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">CSS</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">Tailwind CSS</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">RESTful APIs</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-8 skill-shadow hover-lift border border-primary-container/20 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-20 transition-opacity text-primary-container">
+<span class="material-symbols-outlined text-6xl drop-shadow-[0_0_15px_rgba(0,240,255,0.5)]">settings</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6 relative z-10 text-glow">Backend &amp; Tools</h3>
+<div class="flex flex-wrap gap-2 relative z-10">
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">FastAPI</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">Django</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">Spring Boot</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">SQL (PostgreSQL, MySQL)</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">MongoDB</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">RabbitMQ</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">Docker &amp; Containers</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">Kubernetes</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">Linux (Terminal)</span>
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">Git/GitHub</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-8 skill-shadow hover-lift border border-primary-container/20 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-20 transition-opacity text-primary-container">
+<span class="material-symbols-outlined text-6xl drop-shadow-[0_0_15px_rgba(0,240,255,0.5)]">cloud</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6 relative z-10 text-glow">Infrastructure</h3>
+<div class="flex flex-wrap gap-2 relative z-10">
+<span class="bg-surface-variant/50 text-primary-container font-code-sm text-code-sm px-3 py-1 rounded-DEFAULT border border-primary-container/20">AWS (EC2, S3, RDS, IAM, VPC, Lambda, CloudWatch)</span>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary mb-8 border-b border-primary-container/30 pb-4 text-glow">
+                        Proficiency Levels
+                    </h2>
+<div class="space-y-8">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-mono text-label-mono text-primary-container tracking-widest uppercase">JavaScript / TypeScript</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Advanced</span>
+</div>
+<div class="w-full bg-surface-variant/50 h-1.5 rounded-full overflow-hidden shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]">
+<div class="bg-primary-container h-full progress-bar-fill w-0 relative" data-width="90%" style="width: 90%;">
+<div class="absolute top-0 right-0 bottom-0 w-4 bg-white/50 blur-[2px]"></div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-mono text-label-mono text-primary-container tracking-widest uppercase">React Ecosystem</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Advanced</span>
+</div>
+<div class="w-full bg-surface-variant/50 h-1.5 rounded-full overflow-hidden shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]">
+<div class="bg-primary-container h-full progress-bar-fill w-0 relative" data-width="85%" style="width: 85%;">
+<div class="absolute top-0 right-0 bottom-0 w-4 bg-white/50 blur-[2px]"></div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-mono text-label-mono text-primary-container tracking-widest uppercase">Java</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Advanced</span>
+</div>
+<div class="w-full bg-surface-variant/50 h-1.5 rounded-full overflow-hidden shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]">
+<div class="bg-primary-container h-full progress-bar-fill w-0 relative" data-width="80%" style="width: 80%;">
+<div class="absolute top-0 right-0 bottom-0 w-4 bg-white/50 blur-[2px]"></div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-mono text-label-mono text-primary-container tracking-widest uppercase">UI/UX Design Implementation</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Upper Intermediate</span>
+</div>
+<div class="w-full bg-surface-variant/50 h-1.5 rounded-full overflow-hidden shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]">
+<div class="bg-primary-container h-full progress-bar-fill w-0 relative" data-width="75%" style="width: 75%;">
+<div class="absolute top-0 right-0 bottom-0 w-4 bg-white/50 blur-[2px]"></div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-mono text-label-mono text-primary-container tracking-widest uppercase">Backend (Node/Python)</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Intermediate</span>
+</div>
+<div class="w-full bg-surface-variant/50 h-1.5 rounded-full overflow-hidden shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]">
+<div class="bg-primary-container h-full progress-bar-fill w-0 relative" data-width="60%" style="width: 60%;">
+<div class="absolute top-0 right-0 bottom-0 w-4 bg-white/50 blur-[2px]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-8 flex flex-col justify-center border border-primary-container/20 skill-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-50"></div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6 text-glow">Approach &amp; Methodology</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        My development philosophy focuses on writing clean, maintainable, and user-centric code. I prioritize accessibility, performance, and a scalable architecture from day zero.
+                    </p>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface"><li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl drop-shadow-[0_0_5px_rgba(0,240,255,0.8)]">check_circle</span>
+    Agile Methodologies (SCRUM)
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl drop-shadow-[0_0_5px_rgba(0,240,255,0.8)]">check_circle</span>
+    Algorithms &amp; Data Structures Design
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl drop-shadow-[0_0_5px_rgba(0,240,255,0.8)]">check_circle</span>
+    Competitive Programming
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl drop-shadow-[0_0_5px_rgba(0,240,255,0.8)]">language</span>
+    Languages: Spanish (Native), English
+</li></ul>
+</div>
+</div>
+</section>
+<section>
+<h2 class="font-display-lg text-display-lg text-primary mb-10 flex items-center gap-3 border-b border-primary-container/30 pb-4 text-glow">
+<span class="material-symbols-outlined text-primary-container drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                Interpersonal Skills
+            </h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<div class="bg-surface-container p-6 rounded-lg text-center border border-primary-container/20 skill-shadow hover-lift group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-4 block mx-auto group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] group-hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.9)]">forum</span>
+<h4 class="font-body-md text-body-md font-bold text-primary group-hover:text-glow transition-all">Effective Communication</h4>
+</div>
+<div class="bg-surface-container p-6 rounded-lg text-center border border-primary-container/20 skill-shadow hover-lift group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-4 block mx-auto group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] group-hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.9)]">groups</span>
+<h4 class="font-body-md text-body-md font-bold text-primary group-hover:text-glow transition-all">Teamwork</h4>
+</div>
+<div class="bg-surface-container p-6 rounded-lg text-center border border-primary-container/20 skill-shadow hover-lift group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-4 block mx-auto group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] group-hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.9)]">lightbulb</span>
+<h4 class="font-body-md text-body-md font-bold text-primary group-hover:text-glow transition-all">Problem Solving</h4>
+</div>
+<div class="bg-surface-container p-6 rounded-lg text-center border border-primary-container/20 skill-shadow hover-lift group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-4 block mx-auto group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] group-hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.9)]">schedule</span>
+<h4 class="font-body-md text-body-md font-bold text-primary group-hover:text-glow transition-all">Time Management</h4>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-12 bg-surface-container border-t border-primary-container/20 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-max-width mx-auto gap-4">
+<span class="font-headline-md text-headline-md text-primary font-bold text-glow">
+                Portfolio
+            </span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Professional Portfolio. All rights reserved.
+            </p>
+<div class="flex gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all active:scale-98" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all active:scale-98" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all active:scale-98" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const progressBars = document.querySelectorAll('.progress-bar-fill');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.getAttribute('data-width');
+                        entry.target.style.width = width;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            progressBars.forEach(bar => {
+                observer.observe(bar);
+            });
+        });
+    </script>
+</body></html>
