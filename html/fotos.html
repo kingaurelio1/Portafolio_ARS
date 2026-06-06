@@ -1,0 +1,316 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Photography // AURELIO.SYS</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "surface-container-low": "#1a1b21",
+                            "primary-fixed-dim": "#00dbe9",
+                            "on-tertiary": "#3c0090",
+                            "surface-container-lowest": "#0d0e13",
+                            "surface-container-highest": "#34343a",
+                            "on-tertiary-fixed-variant": "#5700c9",
+                            "on-error-container": "#ffdad6",
+                            "tertiary-container": "#e1d2ff",
+                            "surface-variant": "#34343a",
+                            "secondary-container": "#4f8eff",
+                            "tertiary-fixed": "#e9ddff",
+                            "surface-dim": "#121318",
+                            "inverse-surface": "#e3e1e9",
+                            "inverse-on-surface": "#2f3036",
+                            "background": "#121318",
+                            "primary-fixed": "#7df44",
+                            "on-error": "#690005",
+                            "surface-container-high": "#292a2f",
+                            "secondary-fixed": "#d8e2ff",
+                            "on-surface": "#e3e1e9",
+                            "surface": "#121318",
+                            "on-primary": "#00363a",
+                            "on-secondary-container": "#00275e",
+                            "surface-bright": "#38393f",
+                            "surface-container": "#1e1f25",
+                            "on-surface-variant": "#b9cacb",
+                            "on-secondary-fixed-variant": "#004396",
+                            "on-primary-container": "#006970",
+                            "on-primary-fixed": "#002022",
+                            "tertiary-fixed-dim": "#d1bcff",
+                            "secondary": "#aec6ff",
+                            "on-secondary": "#002e6a",
+                            "on-tertiary-fixed": "#23005b",
+                            "surface-tint": "#00dbe9",
+                            "on-secondary-fixed": "#001a42",
+                            "on-primary-fixed-variant": "#004f54",
+                            "on-tertiary-container": "#7213ff",
+                            "error-container": "#93000a",
+                            "outline-variant": "#3b494b",
+                            "on-background": "#e3e1e9",
+                            "outline": "#849495",
+                            "primary-container": "#00f0ff",
+                            "error": "#ffb4ab",
+                            "tertiary": "#faf3ff",
+                            "secondary-fixed-dim": "#aec6ff",
+                            "inverse-primary": "#006970",
+                            "primary": "#dbfcff"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                        },
+                        "spacing": {
+                            "max-width": "1280px",
+                            "margin-mobile": "16px",
+                            "margin-desktop": "64px",
+                            "unit": "4px",
+                            "gutter": "24px"
+                        },
+                        "fontFamily": {
+                            "body-lg": ["Geist"],
+                            "body-md": ["Geist"],
+                            "display-lg-mobile": ["Sora"],
+                            "code-sm": ["JetBrains Mono"],
+                            "headline-md": ["Sora"],
+                            "display-lg": ["Sora"],
+                            "label-mono": ["JetBrains Mono"]
+                        },
+                        "fontSize": {
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                            "code-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                            "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                        }
+                    }
+                }
+            }
+        </script>
+    <style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            .glow-sm { box-shadow: 0 0 15px rgba(0, 219, 233, 0.3); }
+            .glow-hover:hover { box-shadow: 0 0 25px rgba(0, 219, 233, 0.5); }
+            .glass-panel { backdrop-filter: blur(12px); background: rgba(18, 19, 24, 0.7); }
+            .scanline {
+                width: 100%;
+                height: 2px;
+                background: rgba(0, 219, 233, 0.1);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                animation: scan 8s linear infinite;
+            }
+            @keyframes scan {
+                0% { transform: translateY(-100%); }
+                100% { transform: translateY(1000%); }
+            }
+            .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+            .custom-scrollbar::-webkit-scrollbar-track { background: #0d0e13; }
+            .custom-scrollbar::-webkit-scrollbar-thumb { background: #3b494b; }
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #00dbe9; }
+        </style>
+    </head>
+    <body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed custom-scrollbar overflow-x-hidden">
+    <div class="scanline pointer-events-none"></div>
+    <!-- Navigation Shell -->
+    <header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-max-width mx-auto bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="font-headline-md text-headline-md font-black tracking-tighter text-primary-fixed-dim">PORTFOLIO</div>
+    <nav class="hidden md:flex gap-8 items-center font-label-mono text-label-mono uppercase tracking-widest">
+    <a class="text-on-surface-variant hover:text-primary-fixed-dim transition-all duration-300" href="#">About</a>
+    <a class="text-on-surface-variant hover:text-primary-fixed-dim transition-all duration-300" href="#">Projects</a>
+    <a class="text-on-surface-variant hover:text-primary-fixed-dim transition-all duration-300" href="#">Skills</a>
+    <a class="text-primary-fixed-dim border-b-2 border-primary-fixed-dim pb-1" href="#">Photography</a>
+    <a class="text-on-surface-variant hover:text-primary-fixed-dim transition-all duration-300" href="#">Contact</a>
+    </nav>
+    <button class="bg-primary-fixed-dim text-on-primary font-label-mono px-6 py-2 rounded hover:glow-sm transition-all active:scale-95 cursor-pointer">DOWNLOAD CV</button>
+    </header>
+    <!-- Side Navigation (Mobile/Tablet View) -->
+    <main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+    <!-- Hero Section -->
+    <section class="mb-32 relative">
+    
+    <div class="max-w-3xl relative z-10 transition-all duration-700 opacity-100 translate-y-0">
+    <div class="inline-block border border-primary-fixed-dim/30 px-3 py-1 mb-6">
+    <span class="font-code-sm text-code-sm text-primary-fixed-dim uppercase tracking-widest font-label-mono">System // Creative_Output</span>
+    </div>
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Photography</h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-12">
+                        When I'm not architecting systems or optimizing kernels, I explore the world through a glass lens. My photography is a technical extension of my engineering mindset: an obsession with light physics, geometric precision, and the raw texture of our digital and physical reality.
+                    </p>
+    <div class="flex flex-wrap gap-6 font-code-sm">
+    <div class="flex items-center gap-3 bg-surface-container-high px-4 py-2 border-t border-primary-fixed-dim/20">
+    <span class="text-primary-fixed-dim">01</span>
+    <span class="">ARCHITECTURAL_VOID</span>
+    </div>
+    <div class="flex items-center gap-3 bg-surface-container-high px-4 py-2 border-t border-primary-fixed-dim/20">
+    <span class="text-primary-fixed-dim">02</span>
+    <span class="">ANALOG_MACRO</span>
+    </div>
+    <div class="flex items-center gap-3 bg-surface-container-high px-4 py-2 border-t border-primary-fixed-dim/20">
+    <span class="text-primary-fixed-dim">03</span>
+    <span class="">ORGANIC_SPECTRUM</span>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Gallery Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+    <!-- Architectural Piece -->
+    <div class="md:col-span-8 group relative overflow-hidden bg-surface-container-low border border-outline-variant/30 glow-hover transition-all duration-500 duration-700 opacity-100 translate-y-0">
+    <div class="aspect-[16/9] overflow-hidden">
+    <img alt="Architecture" class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLs8wRuj10vMrtnwi8p204OLAiFUHdraOLlar3mq33-Xld74exc84T728f1boekiFjoytTH5DVmSFPYlTLaTWf9avmFcV38gU5tZNleC5oVIX83NVCbS4XkEYG7a1V6ZSVFjfAl7mSJYFGJDRKiQw3z-acqMo4YgRNyDdD5dE5USPvGlBqdmbwfC0yhubgZy7M1I-gqJ--7Hi_1r4mlszVQ_y_SrP8UnsyobBFHWHPvd-Udk2HgjMly33dc">
+    </div>
+    <!-- Technical Overlay -->
+    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-surface-container-lowest to-transparent flex flex-col md:flex-row justify-between items-end md:items-center gap-4">
+    <div>
+    <h3 class="font-headline-md text-headline-md text-primary-fixed-dim mb-1">CONCRETE_BRUTALISM</h3>
+    <p class="font-code-sm text-code-sm text-on-surface-variant uppercase tracking-widest">Urban Infrastructure // 001</p>
+    </div>
+    <div class="flex gap-4 font-label-mono text-[10px] uppercase text-primary-fixed-dim/80 bg-surface-container-highest/80 backdrop-blur px-4 py-2 border border-outline-variant/40">
+    <div class="flex flex-col border-r border-outline-variant/40 pr-4">
+    <span class="opacity-50">Shutter</span>
+    <span class="">1/500s</span>
+    </div>
+    <div class="flex flex-col border-r border-outline-variant/40 pr-4">
+    <span class="opacity-50">Aperture</span>
+    <span class="">f/8.0</span>
+    </div>
+    <div class="flex flex-col border-r border-outline-variant/40 pr-4">
+    <span class="opacity-50">ISO</span>
+    <span class="">100</span>
+    </div>
+    <div class="flex flex-col">
+    <span class="opacity-50">Lens</span>
+    <span class="">35mm</span>
+    </div>
+    </div>
+    </div>
+    <div class="absolute top-4 right-4 bg-primary-fixed-dim text-on-primary p-2 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+    <span class="material-symbols-outlined" data-icon="open_in_full">open_in_full</span>
+    </div>
+    </div>
+    <!-- Vintage Lens Piece -->
+    <div class="md:col-span-4 group relative overflow-hidden bg-surface-container-low border border-outline-variant/30 glow-hover transition-all duration-500 duration-700 opacity-100 translate-y-0">
+    <div class="aspect-[3/4] overflow-hidden">
+    <img alt="Vintage Macro" class="w-full h-full object-cover brightness-90 group-hover:scale-110 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLtOwDC3lq4XHnLUKuSsVrYBJ2y3Iqsbgw7u0g21IeXyGJhtt1K2sFqDsXFjyCpj0M_IRman0Bf5vGILx_ps15d47zIQCW5QmR1OBpyAVL6QS6FabPgthlv7sgn2Qbte1oX3rvm7dsyNbcxsLN2GQ0mcyU_CreqT8OeI_7sexG1d8XOuhdQf9HAIJJi6M7SEBKqXiBJYezeATZWT9TTtN5EYNgID99AZPUOdAR01khhNokrwnzVPy9s095sH">
+    </div>
+    <div class="absolute inset-0 bg-primary-fixed-dim/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-surface-container-lowest to-transparent">
+    <h3 class="font-headline-md text-headline-md text-primary-fixed-dim mb-1">OPTIC_HERITAGE</h3>
+    <p class="font-code-sm text-code-sm text-on-surface-variant uppercase mb-4 tracking-widest">Vintage Macro // 012</p>
+    <div class="grid grid-cols-2 gap-2 font-label-mono text-[10px] text-on-surface-variant">
+    <span class="bg-surface-container-high/60 px-2 py-1">ISO 800</span>
+    <span class="bg-surface-container-high/60 px-2 py-1">1/60s</span>
+    <span class="bg-surface-container-high/60 px-2 py-1">f/2.8</span>
+    <span class="bg-surface-container-high/60 px-2 py-1">50mm Manual</span>
+    </div>
+    </div>
+    </div>
+    <!-- Landscape Piece -->
+    <div class="md:col-span-12 group relative overflow-hidden bg-surface-container-low border border-outline-variant/30 glow-hover transition-all duration-500 duration-700 opacity-100 translate-y-0">
+    <div class="aspect-[21/9] md:aspect-[3/1] overflow-hidden">
+    <img alt="Atmospheric Landscape" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLuz-UogXhQbfGGEw2fGFKE0eAeGHFb760dBPyxB6n8wNggkrajW-PnxjlLvSoBxJBzhWZPQydsoXZsb6mE0qM-qrGs_N7QQIaHKF-PQcvAsJyv9-HDYONkVUnn21WrRCLGGUFv0tXzuvqy5hhmCT3bOb9_-hBWVjZk0I92C7QQZz-31_BWG8D6RpkKZRHjCBxoYhgB9q7yeII4acfhuE8V_iD5H6OzmJG_X9FWmCYrTCNAJJN8dSy-XBivK">
+    </div>
+    <div class="absolute inset-0 flex items-center justify-center bg-background/20 opacity-0 group-hover:opacity-100 transition-opacity">
+    <div class="glass-panel p-8 border border-primary-fixed-dim/20 max-w-xl text-center">
+    <span class="font-label-mono text-primary-fixed-dim mb-2 block tracking-[0.3em] uppercase">Environment Mapping</span>
+    <h2 class="font-headline-md text-headline-md mb-4">CYBERNETIC_NATURE.EXE</h2>
+    <p class="text-on-surface-variant font-code-sm">Captured at dawn. High atmospheric scattering. Perfect volumetric lighting simulation in the physical world.</p>
+    </div>
+    </div>
+    <div class="absolute top-6 left-6 font-code-sm bg-surface-container-lowest/80 px-4 py-2 border border-outline-variant/30 flex items-center gap-3">
+    <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                        LIVE_FEED: EXTERNAL_GRID_049
+                    </div>
+    <div class="absolute bottom-6 right-6 font-label-mono text-[11px] flex gap-8 text-on-surface-variant bg-surface-container-lowest/80 px-6 py-3 border border-outline-variant/30">
+    <div class="">EXP: <span class="text-primary-fixed-dim">+0.3</span></div>
+    <div class="">COLOR: <span class="text-primary-fixed-dim">FLAT_LOG</span></div>
+    <div class="">GPS: <span class="text-primary-fixed-dim">52.5200° N, 13.4050° E</span></div>
+    </div>
+    </div>
+    </section>
+    <!-- Technical Specs / Footer Section -->
+    <section class="mt-32 border-t border-outline-variant/30 pt-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 transition-all duration-700 opacity-100 translate-y-0">
+    <div>
+    <h4 class="font-label-mono text-label-mono text-primary-fixed-dim uppercase mb-6 tracking-widest">Hardware_Stack</h4>
+    <ul class="font-code-sm text-code-sm text-on-surface-variant space-y-3">
+    <li class="flex justify-between border-b border-outline-variant/10 pb-1"><span class="">Chassis</span> <span class="text-on-surface">Sony Alpha A7R IV</span></li>
+    <li class="flex justify-between border-b border-outline-variant/10 pb-1"><span class="">Prime_Glass</span> <span class="text-on-surface">35mm f/1.4 G Master</span></li>
+    <li class="flex justify-between border-b border-outline-variant/10 pb-1"><span class="">Wide_Glass</span> <span class="text-on-surface">12-24mm f/2.8 G Master</span></li>
+    <li class="flex justify-between border-b border-outline-variant/10 pb-1"><span class="">Legacy_Adaptor</span> <span class="text-on-surface">Helios 44-2 58mm</span></li>
+    </ul>
+    </div>
+    <div>
+    <h4 class="font-label-mono text-label-mono text-primary-fixed-dim uppercase mb-6 tracking-widest">Post_Processing</h4>
+    <ul class="font-code-sm text-code-sm text-on-surface-variant space-y-3">
+    <li class="flex justify-between border-b border-outline-variant/10 pb-1"><span class="">Engine</span> <span class="text-on-surface">Adobe Lightroom CC</span></li>
+    <li class="flex justify-between border-b border-outline-variant/10 pb-1"><span class="">Color_Grading</span> <span class="text-on-surface">Custom LUTs (Cyber_V2)</span></li>
+    <li class="flex justify-between border-b border-outline-variant/10 pb-1"><span class="">Retouching</span> <span class="text-on-surface">Frequency Separation</span></li>
+    </ul>
+    </div>
+    <div class="flex flex-col justify-between">
+    <p class="font-code-sm text-on-surface-variant italic leading-relaxed">
+                            "Every pixel is a data point. Every shadow is a null value waiting to be defined."
+                        </p>
+    <div class="mt-8 flex gap-4">
+    <a class="w-12 h-12 flex items-center justify-center border border-outline-variant/30 hover:border-primary-fixed-dim hover:text-primary-fixed-dim transition-colors" href="#">
+    <span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+    </a>
+    <a class="px-6 h-12 flex items-center justify-center border border-primary-fixed-dim text-primary-fixed-dim hover:bg-primary-fixed-dim hover:text-on-primary transition-all font-label-mono text-label-mono uppercase tracking-widest flex-grow" href="#">
+                                View Full Archive
+                            </a>
+    </div>
+    </div>
+    </div>
+    </section>
+    </main>
+    <footer class="w-full py-8 px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 border-t border-outline-variant/30 bg-surface-container-lowest font-code-sm text-code-sm">
+    <div class="text-primary-fixed-dim font-label-mono">
+                © 2024 AURELIO_REYES // SYSTEM_SECURED
+            </div>
+    <div class="flex gap-8 text-on-surface-variant">
+    <a class="hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim/50 transition-opacity" href="#">LINKEDIN</a>
+    <a class="hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim/50 transition-opacity" href="#">GITHUB</a>
+    <a class="hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim/50 transition-opacity" href="#">X_CORP</a>
+    </div>
+    </footer>
+    <!-- Back to Top Micro-Interaction -->
+    <button class="fixed bottom-8 right-8 w-12 h-12 bg-surface-container-high border border-primary-fixed-dim/30 flex items-center justify-center hover:glow-sm transition-all text-primary-fixed-dim active:scale-90 z-50" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <span class="material-symbols-outlined" data-icon="arrow_upward">arrow_upward</span>
+    </button>
+    <script>
+            // Simple scroll parallax/reveal effect
+            const observerOptions = {
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-12');
+                    }
+                });
+            }, observerOptions);
+    
+            document.querySelectorAll('section > div, .group').forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-12');
+                observer.observe(el);
+            });
+        </script>
+    
+    
+    </body></html>
