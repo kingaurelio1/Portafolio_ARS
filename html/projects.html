@@ -181,12 +181,23 @@
 <!-- Desktop Navigation -->
 <div class="hidden md:flex items-center gap-8">
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="#">About Me</a>
-<a class="font-body-md text-body-md text-primary-container font-bold border-b-2 border-primary-container pb-1 px-3 py-2" href="#">Projects</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="#">Skills</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="#">Photography</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="#">Contact</a>
-<button class="bg-primary-container text-on-primary-container font-body-md text-body-md font-bold px-6 py-2.5 rounded-DEFAULT transition-all duration-200 hover:bg-primary-container/90 active:scale-95 shadow-sm">
-                    Download CV
-                </button>
+<a class="font-body-md text-body-md text-primary-container font-bold border-b-2 border-primary-container pb-1 px-3 py-2" href="./projects.html">Projects</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="skills.html">Skills</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="#">Photography</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="contacto.html">Contact</a>
+<button onclick="downloadCV()"
+        class="hidden md:block bg-primary-container text-on-primary-container font-body-md text-body-md font-bold py-2 px-6 rounded-DEFAULT hover:opacity-90 transition-opacity active:scale-95 transition-transform duration-200 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)]">
+    Download CV
+    <script>
+        function downloadCV() {
+            const link = document.createElement('a');
+            link.href = '../Archivos_CV/ARS_2026_CV_Software.pdf';
+            link.download = 'Aurelio_Reyes_CV_Software.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</button>
 </div>
 <!-- Mobile Menu Toggle -->
 <button class="md:hidden text-primary-container p-2 active:scale-95 transition-transform duration-200">
