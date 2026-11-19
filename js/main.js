@@ -5,9 +5,9 @@ const footerHTML = `
         <span class="font-headline-md text-headline-md text-primary font-bold text-glow">Portfolio</span>
         <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Aurelio Reyes Sánchez. All rights reserved.</p>
         <div class="flex gap-6">
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="https://es.linkedin.com/in/aurelio-reyes-sanchez" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="https://github.com/kingaurelio1" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="https://x.com/tu-usuario" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="https://www.instagram.com/aureliophotos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
     </div>
 </footer>

@@ -260,27 +260,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="w-full py-12 bg-surface-container border-t border-primary-container/20 relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-max-width mx-auto gap-4">
-            <span class="font-headline-md text-headline-md text-primary font-bold text-glow">Portfolio</span>
-            <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Aurelio Reyes Sánchez. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="#">LinkedIn</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="#">GitHub</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="#">Twitter</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function downloadCV() {
-            const link = document.createElement('a');
-            link.href = '../Archivos_CV/ARS_2026_CV_Software.pdf';
-            link.download = 'Aurelio_Reyes_CV_Software.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
+    <div id="footer-placeholder"></div>
+    <script src="../js/main.js"></script>
 </body>
 </html>
