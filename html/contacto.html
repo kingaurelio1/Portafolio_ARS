@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Portfolio - Projects</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400&amp;family=JetBrains+Mono:wght@400;500&amp;family=Sora:wght@600;800&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact - Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
                 "inverse-surface": "#e3e1e9",
                 "surface": "#121318",
                 "on-surface": "#e3e1e9",
@@ -42,7 +42,7 @@
                 "on-primary-fixed": "#002022",
                 "surface-bright": "#38393f",
                 "error": "#ffb4ab",
-                "background": "#121318",
+                "background": "#0a0a0c",
                 "on-error": "#690005",
                 "surface-container-highest": "#34343a",
                 "secondary-container": "#4f8eff",
@@ -58,135 +58,187 @@
                 "secondary-fixed": "#d8e2ff",
                 "on-primary": "#00363a",
                 "tertiary-container": "#e1d2ff",
-                "surface-container-low": "#1a1b21",
-                "surface-container": "#1e1f25"
-        },
-        "borderRadius": {
+                "surface-container-low": "#121318",
+                "surface-container": "#16171d"
+            },
+            "borderRadius": {
                 "DEFAULT": "0.125rem",
                 "lg": "0.25rem",
                 "xl": "0.5rem",
                 "full": "0.75rem"
-        },
-        "spacing": {
+            },
+            "spacing": {
                 "margin-desktop": "64px",
                 "max-width": "1280px",
                 "gutter": "24px",
                 "margin-mobile": "16px",
                 "unit": "4px"
-        },
-        "fontFamily": {
-                "display-lg": [
-                        "Sora"
-                ],
-                "body-md": [
-                        "Geist"
-                ],
-                "display-lg-mobile": [
-                        "Sora"
-                ],
-                "code-sm": [
-                        "JetBrains Mono"
-                ],
-                "body-lg": [
-                        "Geist"
-                ],
-                "headline-md": [
-                        "Sora"
-                ],
-                "label-mono": [
-                        "JetBrains Mono"
-                ]
-        },
-        "fontSize": {
-                "display-lg": [
-                        "48px",
-                        {
-                                "lineHeight": "56px",
-                                "letterSpacing": "-0.02em",
-                                "fontWeight": "800"
-                        }
-                ],
-                "body-md": [
-                        "16px",
-                        {
-                                "lineHeight": "24px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "display-lg-mobile": [
-                        "32px",
-                        {
-                                "lineHeight": "40px",
-                                "letterSpacing": "-0.02em",
-                                "fontWeight": "800"
-                        }
-                ],
-                "code-sm": [
-                        "13px",
-                        {
-                                "lineHeight": "18px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "body-lg": [
-                        "18px",
-                        {
-                                "lineHeight": "28px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "headline-md": [
-                        "24px",
-                        {
-                                "lineHeight": "32px",
-                                "fontWeight": "600"
-                        }
-                ],
-                "label-mono": [
-                        "14px",
-                        {
-                                "lineHeight": "20px",
-                                "letterSpacing": "0.05em",
-                                "fontWeight": "500"
-                        }
-                ]
+            },
+            "fontFamily": {
+                "display-lg": ["Sora"],
+                "body-md": ["Geist"],
+                "display-lg-mobile": ["Sora"],
+                "code-sm": ["JetBrains Mono"],
+                "body-lg": ["Geist"],
+                "headline-md": ["Sora"],
+                "label-mono": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                "code-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                "label-mono": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+            }
+          }
         }
-},
-    },
-  }
-</script>
-<style>
-        .project-card {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    </script>
+    <style>
+        .skill-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 240, 255, 0.05);
         }
-        .project-card:hover {
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
+        }
+        .hover-lift:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 50px -10px rgba(0, 240, 255, 0.2), inset 0 0 30px rgba(0, 240, 255, 0.1);
+            border-color: rgba(0, 240, 255, 0.6);
         }
-        .project-image {
-            transition: transform 0.5s ease;
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
         }
-        .project-card:hover .project-image {
-            transform: scale(1.05);
+        .bg-cyber-gradient {
+            background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container/20">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm transition-all duration-300 border-b border-surface-variant">
-<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-<div class="font-headline-md text-headline-md font-bold text-primary-container tracking-tight">
+<body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container relative min-h-screen flex flex-col">
+    <div class="fixed inset-0 pointer-events-none bg-cyber-gradient z-0"></div>
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-primary-container/20">
+        <div class="flex justify-between items-center h-20 px-8 max-w-max-width mx-auto">
+            <a class="font-headline-md text-headline-md font-bold text-primary-container active:scale-95 transition-transform duration-200 text-glow" href="index.html">
                 Portfolio
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a class="text-on-surface-variant hover:text-primary-container transition-colors hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 rounded-DEFAULT" href="index.html">About Me</a>
+                <a class="text-on-surface-variant hover:text-primary-container transition-colors hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 rounded-DEFAULT" href="projects.html">Projects</a>
+                <a class="text-on-surface-variant hover:text-primary-container transition-colors hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 rounded-DEFAULT" href="skills.html">Skills</a>
+                <a class="text-on-surface-variant hover:text-primary-container transition-colors hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 rounded-DEFAULT" href="fotos.html">Photography</a>
+                <a class="text-primary-container font-bold border-b-2 border-primary-container pb-1 hover:bg-surface-variant/20 transition-all font-body-md text-body-md py-2 px-3 text-glow" href="contacto.html">Contact</a>
             </div>
-<!-- Desktop Navigation -->
-<div class="hidden md:flex items-center gap-8">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="#">About Me</a>
-<a class="font-body-md text-body-md text-primary-container font-bold border-b-2 border-primary-container pb-1 px-3 py-2" href="#">Projects</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="#">Skills</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="#">Photography</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-variant/50 px-3 py-2 rounded-md" href="#">Contact</a>
-<button onclick="downloadCV()"
-        class="hidden md:block bg-primary-container text-on-primary-container font-body-md text-body-md font-bold py-2 px-6 rounded-DEFAULT hover:opacity-90 transition-opacity active:scale-95 transition-transform duration-200 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)]">
-    Download CV
+            <button onclick="downloadCV()" class="hidden md:block bg-primary-container text-on-primary-container font-body-md text-body-md font-bold py-2 px-6 rounded-DEFAULT hover:opacity-90 transition-opacity active:scale-95 transition-transform duration-200 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)]">
+                Download CV
+            </button>
+            <button class="md:hidden text-primary-container p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-32 px-4 md:px-8 max-w-max-width mx-auto relative z-10 w-full flex-grow">
+        <header class="mb-16 md:mb-20 text-center md:text-left max-w-3xl">
+            <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-6 text-glow">
+                Get in Touch
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Have a project in mind, a backend architecture challenge, or an engineering opportunity? Send me a message and I'll get back to you as soon as possible.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Left Column: Direct Info -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-surface-container rounded-xl p-6 border border-primary-container/20 skill-shadow hover-lift flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary-container text-3xl drop-shadow-[0_0_8px_rgba(0,240,255,0.6)]">mail</span>
+                    <div>
+                        <h3 class="font-label-mono text-label-mono text-primary-container uppercase tracking-widest mb-1">Email</h3>
+                        <a href="mailto:aurelior997@gmail.com" class="font-body-md text-body-md text-on-surface hover:text-primary-container transition-colors">
+                            aurelior997@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-surface-container rounded-xl p-6 border border-primary-container/20 skill-shadow hover-lift flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary-container text-3xl drop-shadow-[0_0_8px_rgba(0,240,255,0.6)]">location_on</span>
+                    <div>
+                        <h3 class="font-label-mono text-label-mono text-primary-container uppercase tracking-widest mb-1">Location</h3>
+                        <p class="font-body-md text-body-md text-on-surface">Madrid, Spain</p>
+                        <p class="font-code-sm text-code-sm text-on-surface-variant mt-1">Available for remote &amp; hybrid roles</p>
+                    </div>
+                </div>
+
+                <div class="bg-surface-container rounded-xl p-6 border border-primary-container/20 skill-shadow relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-50"></div>
+                    <h3 class="font-label-mono text-label-mono text-primary-container uppercase tracking-widest mb-4">Social &amp; Code</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-4 py-2 rounded-DEFAULT border border-primary-container/40 hover:bg-primary-container hover:text-on-primary-container transition-all">GitHub</a>
+                        <a href="#" class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-4 py-2 rounded-DEFAULT border border-primary-container/40 hover:bg-primary-container hover:text-on-primary-container transition-all">LinkedIn</a>
+                        <a href="#" class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-4 py-2 rounded-DEFAULT border border-primary-container/40 hover:bg-primary-container hover:text-on-primary-container transition-all">LeetCode</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Contact Form -->
+            <div class="lg:col-span-7 bg-surface-container rounded-xl p-8 md:p-10 border border-primary-container/20 skill-shadow relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-60"></div>
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block font-label-mono text-label-mono text-primary-container uppercase tracking-widest mb-2">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name"
+                                class="w-full bg-surface-container-lowest border border-primary-container/30 rounded-DEFAULT px-4 py-3 text-on-surface font-body-md focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all"/>
+                        </div>
+                        <div>
+                            <label for="email" class="block font-label-mono text-label-mono text-primary-container uppercase tracking-widest mb-2">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com"
+                                class="w-full bg-surface-container-lowest border border-primary-container/30 rounded-DEFAULT px-4 py-3 text-on-surface font-body-md focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all"/>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block font-label-mono text-label-mono text-primary-container uppercase tracking-widest mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Project inquiry, collaboration, etc."
+                            class="w-full bg-surface-container-lowest border border-primary-container/30 rounded-DEFAULT px-4 py-3 text-on-surface font-body-md focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all"/>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block font-label-mono text-label-mono text-primary-container uppercase tracking-widest mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or role..."
+                            class="w-full bg-surface-container-lowest border border-primary-container/30 rounded-DEFAULT px-4 py-3 text-on-surface font-body-md focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all resize-none"></textarea>
+                    </div>
+
+                    <div id="form-status" class="hidden font-code-sm text-code-sm px-4 py-3 rounded-DEFAULT border"></div>
+
+                    <button type="submit"
+                        class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary-container font-body-md text-body-md font-bold py-3 px-8 rounded-DEFAULT hover:opacity-90 active:scale-95 transition-all duration-200 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)]">
+                        Send Message
+                        <span class="material-symbols-outlined text-xl">send</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-12 bg-surface-container border-t border-primary-container/20 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-max-width mx-auto gap-4">
+            <span class="font-headline-md text-headline-md text-primary font-bold text-glow">Portfolio</span>
+            <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Aurelio Reyes Sánchez. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="#">LinkedIn</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="#">GitHub</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] transition-all" href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
     <script>
         function downloadCV() {
             const link = document.createElement('a');
@@ -196,104 +248,15 @@
             link.click();
             document.body.removeChild(link);
         }
+
+        // Preparado para conectar con POST /api/contact en FastAPI
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const statusEl = document.getElementById('form-status');
+            statusEl.textContent = 'Message ready to be sent (backend connection pending).';
+            statusEl.className = 'font-code-sm text-code-sm px-4 py-3 rounded-DEFAULT border border-primary-container/40 bg-primary-container/10 text-primary-container block';
+            e.target.reset();
+        });
     </script>
-</button>
-</div>
-<!-- Mobile Menu Toggle -->
-<button class="md:hidden text-primary-container p-2 active:scale-95 transition-transform duration-200">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-<!-- Main Content Canvas -->
-<main class="pt-32 pb-32 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-<!-- Section Header -->
-<header class="mb-16 md:mb-24 md:w-2/3">
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary-container mb-6">
-                Projects
-            </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-                A selection of recent work demonstrating my focus on creating clean interfaces, fluid interactions, and robust technical solutions for complex problems.
-            </p>
-</header>
-<!-- Projects Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<!-- Project Card 1 -->
-<article class="project-card bg-surface-container rounded-lg overflow-hidden border border-surface-variant relative cursor-pointer group flex flex-col h-full">
-<div class="aspect-video overflow-hidden border-b border-surface-variant bg-surface-container-low relative">
-<img alt="Dashboard UI Design" class="project-image w-full h-full object-cover object-top" data-alt="A clean, modern financial dashboard interface displayed on a sleek laptop screen. The UI features crisp typography, vibrant data visualization charts in shades of primary blue and accent vibrant indigo, set against a pristine white and subtle light grey background. The lighting is soft and studio-like, highlighting the high-end corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa1y9ljAO-oqv0NqoyBQPA4k9qnqu0arqmIicXkEvagy-qmW6TiCZMZVFo02D0RBS97NTF5JiyZihLcekzXFMWLB65xC69LvxtzrgdmciHJBALMkjLtqL7pKuIzxEtTBrjktPxCUiJDgsODg1HWvbwQE8CT099NlNmwbDMLrZNBo_epjhB7hhLKdSMP15t1lG6KHji7DWprGgdi25bYhppU0nKB1Fb-8EhlXxs0X0ykvfwtiassgck5KZnCW0pTJC8faufMoFg1KR6"/>
-</div>
-<div class="p-6 flex-1 flex flex-col">
-<div class="mb-4">
-<span class="font-label-mono text-label-mono text-primary-container uppercase tracking-widest block mb-2">FinTech App</span>
-<h2 class="font-headline-md text-headline-md text-primary-container leading-tight">Computational Complexity Analysis</h2>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Research and implementation of efficient algorithms at UNAM, focusing on complexity analysis and data structure optimization for large-scale problems.</p>
-<div class="flex flex-wrap gap-2 mb-6"><span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-2 py-1 rounded-DEFAULT border border-primary-container/30">Python</span><span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-2 py-1 rounded-DEFAULT border border-primary-container/30">Java</span><span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-2 py-1 rounded-DEFAULT border border-primary-container/30">Algorithms</span></div>
-<div class="mt-auto pt-4 border-t border-surface-variant">
-<a class="inline-flex items-center text-primary-container font-body-md text-body-md font-semibold hover:text-primary transition-colors" href="#">
-                            View Details
-                            <span class="material-symbols-outlined ml-1 text-[20px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</article>
-<!-- Project Card 2 -->
-<article class="project-card bg-surface-container rounded-lg overflow-hidden border border-surface-variant relative cursor-pointer group flex flex-col h-full">
-<div class="aspect-video overflow-hidden border-b border-surface-variant bg-surface-container-low relative">
-<img alt="E-commerce Mobile App" class="project-image w-full h-full object-cover" data-alt="A sophisticated mobile e-commerce application displayed on two floating smartphone mockups. The app features a minimalist design with ample whitespace, elegant typography, and high-quality product photography. The overall tone is luxurious and modern, utilizing a refined color palette of deep blacks, pure whites, and subtle metallic accents in a bright studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb_8BWhN73pWtoHBRpqnYUgfRJ-McT4GS2j5a_l5Ee3vPmCeUGVjDdr_r3dLcQeOk88BkIThhAP8eop-0VPuDLOnDxWqwQJxZZuz0mp-41_1g4Rzfs1-zgotiA0qT_8vbHJBKdi2_LajHLOIj5o7B9GzVtAEdJACp-OdBVj5AXx-M0zntoi7jlQCUZiJGv4OkJ8z1hM6p85y8l8M547FjntB5RlTKxwYo9AIOlug2mvczxD7K_4Daz2-QtxksXOUdy4i4P2jNz54a6"/>
-</div>
-<div class="p-6 flex-1 flex flex-col">
-<div class="mb-4">
-<span class="font-label-mono text-label-mono text-primary-container uppercase tracking-widest block mb-2">E-Commerce</span>
-<h2 class="font-headline-md text-headline-md text-primary-container leading-tight">Backend Systems with Spring Boot</h2>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Development of scalable and robust web solutions using microservices architectures, continuous integration, and advanced database management.</p>
-<div class="flex flex-wrap gap-2 mb-6"><span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-2 py-1 rounded-DEFAULT border border-primary-container/30">Java</span><span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-2 py-1 rounded-DEFAULT border border-primary-container/30">Spring Boot</span><span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-2 py-1 rounded-DEFAULT border border-primary-container/30">SQL</span></div>
-<div class="mt-auto pt-4 border-t border-surface-variant">
-<a class="inline-flex items-center text-primary-container font-body-md text-body-md font-semibold hover:text-primary transition-colors" href="#">
-                            View Details
-                            <span class="material-symbols-outlined ml-1 text-[20px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</article>
-<!-- Project Card 3 -->
-<article class="project-card bg-surface-container rounded-lg overflow-hidden border border-surface-variant relative cursor-pointer group flex flex-col h-full">
-<div class="aspect-video overflow-hidden border-b border-surface-variant bg-surface-container-low relative">
-<img alt="SaaS Platform Design" class="project-image w-full h-full object-cover" data-alt="An abstract representation of a cloud-based SaaS platform architecture. Minimalist isometric geometric shapes and interconnected nodes floating over a clean, light surface grid. The lighting is bright and diffuse, creating soft drop shadows that emphasize depth. The color palette incorporates sleek silver, pristine white, and accents of corporate primary blue to convey trust and technical expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoQnD3vz0Sgo1DdEIkfUkN0G6IEQq_PoZj-aAGLLFs0dZRPW8nPqbcSAr65dHjhLa9XNDyjunSgiHXPx-JvulB-kmDnah72TLSNnQkZuc6ohZ39oqFAWQR30o7JYQ8m-YPZmzxsXzYW8jy_OxrqJDUbCynqAHty7wY6VpjlQmwRYCH8kQMpOUipgji2n-zAKAK5oTrqLjUpvus2wobyM_KEV_4tFFT0AGI1ssZN8wJ1wyByCXrPXKjlJfu9TNnXYbyMpIxHTcGrpdD"/>
-</div>
-<div class="p-6 flex-1 flex flex-col">
-<div class="mb-4">
-<span class="font-label-mono text-label-mono text-primary-container uppercase tracking-widest block mb-2">SaaS Platform</span>
-<h2 class="font-headline-md text-headline-md text-primary-container leading-tight">WalkSat Optimization</h2>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Competitive programming project focused on algorithmic efficiency and solving boolean satisfiability problems using advanced heuristics.</p>
-<div class="flex flex-wrap gap-2 mb-6"><span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-2 py-1 rounded-DEFAULT border border-primary-container/30">Algorithms</span><span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-2 py-1 rounded-DEFAULT border border-primary-container/30">Python</span><span class="bg-primary-container/10 text-primary-container font-code-sm text-code-sm px-2 py-1 rounded-DEFAULT border border-primary-container/30">C++</span></div>
-<div class="mt-auto pt-4 border-t border-surface-variant">
-<a class="inline-flex items-center text-primary-container font-body-md text-body-md font-semibold hover:text-primary transition-colors" href="#">
-                            View Details
-                            <span class="material-symbols-outlined ml-1 text-[20px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</article>
-</div>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-low border-t border-surface-variant py-12">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto gap-4">
-<div class="font-headline-md text-headline-md text-primary-container font-bold">
-                Portfolio
-            </div>
-<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
-                © 2024 Portfolio Professional. All rights reserved.
-            </p>
-<div class="flex items-center gap-6">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors hover:opacity-80 active:scale-95" href="#">LinkedIn</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors hover:opacity-80 active:scale-95" href="#">GitHub</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors hover:opacity-80 active:scale-95" href="#">Twitter</a>
-</div>
-</div>
-</footer>
-</body></html>
+</body>
+</html>
